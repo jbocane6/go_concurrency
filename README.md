@@ -37,3 +37,17 @@ Evita que entre más de un proceso a la vez en sección crítica.
 Sección Crítica
 Fragmento de código donde puede modifir¿carse un recurso compartido.
 
+
+CSP
+- primitivas de entrada y salida para comunicar procesos en código concurrente
+- ! Para enviar información a un proceso
+- ? Para leer la salida de un proceso
+
+Comando protegido ->
+- Guardia(Condicional) -> Declaración
+p1?c -> p2!c salida p1 se envía a variable c y entrada p2 recibe de la misma variable
+
+Canales
+ch := make(chan string)
+ch <- "Hello!"  Enviar Hello al canal c
+message := <- ch Recibir desde canal ch y asignar valor a variable message
